@@ -67,7 +67,7 @@ func getLatest() (version, note, ptime, url string, size uint, err error) {
 		return
 	}
 
-	resp, err := http.Get("https://api.github.com/repos/Arapak/sio-tool/releases/latest")
+	resp, err := http.Get("https://api.github.com/repos/kartof0nix/sio-tool/releases/latest")
 	if err != nil {
 		return
 	}
