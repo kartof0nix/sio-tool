@@ -11,10 +11,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Get next version
-              uses: NatoNathan/increment-semantic-version@v1.0.01
+              uses: codacy/git-version@2.4.0
               id: version
               with:
-                scheme: calver
+                release-branch: main
             - name: Set up Go
               uses: actions/setup-go@v2
               with:
