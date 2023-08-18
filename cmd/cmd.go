@@ -157,6 +157,7 @@ type CodeList struct {
 }
 
 func getCode(filename string, templates []config.CodeTemplate, fileExtensions map[string]struct{}) (codes []CodeList, err error) {
+	fmt.Printf("Filename : " + filename);
 	mp := make(map[string][]int)
 	for i, temp := range templates {
 		suffixMap := map[string]bool{}
