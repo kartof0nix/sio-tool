@@ -78,7 +78,7 @@ func updateLine(line string, maxWidth *int) string {
 
 func (s *Submission) display(first bool, maxWidth *int) {
 	if !first {
-		ansi.CursorUp(6)
+		ansi.CursorUp(5)
 	}
 	_, _ = ansi.Printf("      #: %v\n", s.ParseID())
 	_, _ = ansi.Printf("   when: %v\n", s.When)
@@ -86,7 +86,7 @@ func (s *Submission) display(first bool, maxWidth *int) {
 	_, _ = ansi.Printf("  alias: %v\n", s.ShortName)
 	refreshLine(1, *maxWidth)
 	_, _ = ansi.Printf(updateLine(fmt.Sprintf(" status: %v\n", s.ParseStatus()), maxWidth))
-	_, _ = ansi.Printf(" points: %v\n", s.ParsePoints())
+	// _, _ = ansi.Printf(" points: %v\n", s.ParsePoints())
 }
 
 func Display(submissions []Submission, first bool, maxWidth *int, line bool) {
