@@ -71,7 +71,7 @@ func (c *SioClient) Login() (err error) {
 	if c.instanceClient == Staszic {
 		form.Add("username", c.Username)
 		form.Add("password", password)
-		URL = c.host + "/login/"
+		URL = c.host + "/c/kolko-informatyczne-archiwum/login/"
 	} else if c.instanceClient == Mimuw {
 		form.Add("auth-username", c.Username)
 		form.Add("auth-password", password)
